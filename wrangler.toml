@@ -8,6 +8,6 @@ database_name = "my-jyotish-db-2026"
 database_id = "d7622a00-e8a3-4b81-80c0-8c27bc35c9f3"
 
 [assets]
-directory = "."
+directory = "./public"
 binding = "ASSETS"
 run_worker_first = ["/api/*"]
