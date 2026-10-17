@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin Login | My Jyotish</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#f6f2fb;color:#24104a}
+main{max-width:760px;margin:32px auto;padding:16px}.card{background:#fff;border:1px solid #e5dced;border-radius:18px;padding:24px;margin:14px 0;box-shadow:0 8px 30px #24104a0d}
+h1,h2{margin-top:0}label{display:block;font-weight:600;margin:12px 0}input,textarea,select{display:block;width:100%;padding:12px;border:1px solid #cfc3df;border-radius:9px;margin-top:6px;font:inherit}
+button{padding:11px 16px;border:0;border-radius:9px;background:#49247b;color:#fff;font-weight:700;cursor:pointer;margin:4px 4px 4px 0}button.secondary{background:#eee7f6;color:#24104a}button.danger{background:#9c2c3a}.hidden{display:none!important}.notice{color:#5f5570;font-size:.95rem}.status{margin:12px 0;padding:10px;border-radius:8px;background:#f2edf8;white-space:pre-wrap}.item{border-top:1px solid #eee;padding:12px 0}.item h3{margin:0 0 6px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+</style>
+</head>
+<body><main>
+<h1>पंडित देवानंद शर्मा — एडमिन पैनल</h1>
+<p class="notice">यह पैनल तभी काम करेगा जब सुरक्षित API Worker और D1 डेटाबेस सेटअप हो जाएँ।</p>
+<section id="loginCard" class="card"><h2>एडमिन लॉगिन</h2><form id="loginForm"><label>एडमिन पासवर्ड<input name="password" type="password" autocomplete="current-password" required minlength="14"></label><button type="submit">सुरक्षित लॉगिन</button></form><div id="loginStatus" class="status" role="status"></div></section>
+<section id="dashboard" class="hidden">
+<div class="card"><button id="logoutBtn" class="secondary">लॉगआउट</button><h2>वेबसाइट सामग्री प्रबंधन</h2><p class="notice">यहाँ जो सामग्री जोड़ी जाएगी वह D1 डेटाबेस में साझा होगी।</p></div>
+<div class="card"><h2>ज्योतिषी जोड़ें</h2><form id="astrologerForm"><label>नाम<input name="name" required></label><label>अनुभव<input name="experience"></label><label>विशेषज्ञता<input name="speciality"></label><label>WhatsApp नंबर<input name="contact"></label><label>फोटो URL<input name="photo_url" placeholder="https://..."></label><button>ज्योतिषी सेव करें</button></form><div id="astrologersList"></div></div>
+<div class="card"><h2>प्रोडक्ट जोड़ें</h2><form id="productForm"><label>नाम<input name="name" required></label><label>कीमत<input name="price"></label><label>विवरण<textarea name="description" rows="3"></textarea></label><label>फोटो URL<input name="photo_url" placeholder="https://..."></label><button>प्रोडक्ट सेव करें</button></form><div id="productsList"></div></div>
+<div class="card"><h2>ब्लॉग प्रकाशित करें</h2><form id="blogForm"><label>शीर्षक<input name="title" required maxlength="160"></label><label>श्रेणी<input name="category"></label><label>छोटा परिचय<textarea name="excerpt" rows="2"></textarea></label><label>पूरा लेख<textarea name="content" rows="8" required></textarea></label><label>मुख्य फोटो URL<input name="photo_url" placeholder="https://..."></label><button>ब्लॉग प्रकाशित करें</button></form><div id="blogsList"></div></div>
+<div id="dashStatus" class="status" role="status"></div>
+</section>
+</main><script src="admin.js"></script></body></html>
