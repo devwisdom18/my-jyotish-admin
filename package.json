@@ -1,0 +1,10 @@
+{
+  "name": "my-jyotish-secure-admin",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}

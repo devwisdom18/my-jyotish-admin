@@ -1,0 +1,13 @@
+name = "my-jyotish-secure-admin"
+main = "src/index.js"
+compatibility_date = "2026-10-17"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "my-jyotish-db"
+database_id = "d499ecdd-8b34-4242-bc63-d2dfea097f2c"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
