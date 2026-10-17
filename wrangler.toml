@@ -5,7 +5,7 @@ compatibility_date = "2026-10-17"
 [[d1_databases]]
 binding = "DB"
 database_name = "my-jyotish-db-2026"
-database_id = "d499ecdd-8b34-4242-bc63-d2dfea097f2c"
+database_id = "d7622a00-e8a3-4b81-80c0-8c27bc35c9f3"
 
 [assets]
 directory = "./public"
